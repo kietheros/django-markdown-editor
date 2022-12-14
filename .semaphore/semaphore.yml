@@ -29,6 +29,12 @@ blocks:
           - python manage.py migrate
           - python manage.py test
       jobs:
+        - name: Unit tests
+          commands:
+            - cd martor_demo
+            - python manage.py makemigrations
+            - python manage.py migrate
+            - python manage.py test
         - name: Checklist
           commands:
             - cd martor_demo
@@ -37,3 +43,7 @@ blocks:
           commands:
             - pip install flake8
             - flake8 martor_demo/ --max-line-length=127
+        - name: 'Job #4'
+          commands:
+            - cd martor_demo
+            - python manage.py check --deploy
