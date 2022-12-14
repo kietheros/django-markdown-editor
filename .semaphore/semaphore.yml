@@ -28,10 +28,4 @@ blocks:
           - python manage.py makemigrations
           - python manage.py migrate
           - python manage.py test
-      jobs:
-        - name: Unit tests
-          commands:
-            - cd martor_demo
-            - python manage.py makemigrations
-            - python manage.py migrate
-            - python manage.py test
+      jobs: []
